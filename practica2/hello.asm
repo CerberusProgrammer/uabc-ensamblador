@@ -1,5 +1,5 @@
 section .data
-msg db "Hola mundo", 0 ;Mensaje
+msg db "Hola Omar", 0 ;Mensaje
     len equ $ - msg ;Tamaño del mensaje
     section .text
     global _start   ;Necesitamos exportar '_start' a ld, para que lo reconozca
@@ -10,6 +10,6 @@ _start:
     mov ebx, 1 ;Primer argumento: file handle (stdout).
     mov ecx, msg ;Segundo argumento: puntero a la cadena a escribir.
     mov edx, len ;Tercer argumento: tamaño de la cadena.
-    int 80 ;Llama al Kernel.
+    int 80h ;Llama al Kernel.
     mov eax, 1 ;Número de la llamada al sistema (sys_exit).
-    int 80 ;Llama al Kerne
+    int 80h ;Llama al Kerne
