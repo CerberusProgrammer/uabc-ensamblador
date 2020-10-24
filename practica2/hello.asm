@@ -1,5 +1,5 @@
 section .data
-msg db "Hola Omar", 0 ;Mensaje
+msg db "Hola Mundo", 0 ;Mensaje
     len equ $ - msg ;Tamaño del mensaje
     section .text
     global _start   ;Necesitamos exportar '_start' a ld, para que lo reconozca
